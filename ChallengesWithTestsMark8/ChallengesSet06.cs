@@ -68,7 +68,33 @@ namespace ChallengesWithTestsMark8
 
         public int IndexOfLastUniqueLetter(string str)
         {
-            string distinct = new String(str.Distinct().ToArray());
+            int counter = 0;
+            int last = 0;
+            if (str == "")
+                return -1;
+
+            int[] counts = new int[str.Length];
+            for (int i = 0; i < str.Length; i++)
+            {
+                foreach(var letter in str)
+                {
+                    if (str[i] == letter)
+                        counts[i]++;
+                }
+            }
+
+            for (int i = 0; i < counts.Length; i++)
+            {
+                if (counts[i] == 1)
+                    last = i;
+                else if (counts[i] > 1)
+                    counter++;
+            }
+            if (counter == str.Length)
+                return -1;
+            return last;
+
+            /*string distinct = new String(str.Distinct().ToArray());
 
             int a = str.ToCharArray().Count(z => z == 'a');
             int b = str.ToCharArray().Count(y => y == 'b');
@@ -164,7 +190,7 @@ namespace ChallengesWithTestsMark8
             else if (string.IsNullOrEmpty(str))
                 return -1;
             else
-                return a = 0;   
+                return a = 0;   */
             
         }
 
