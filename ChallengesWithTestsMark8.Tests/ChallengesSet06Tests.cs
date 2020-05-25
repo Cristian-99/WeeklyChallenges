@@ -98,13 +98,13 @@ namespace ChallengesWithTestsMark8.Tests
         }
 
         [Theory]
-        [InlineData(new int[] { 1, 2, 2, 3, 4, 5 }, 2)]
+        [InlineData(new int[] { 3, 3, 3, 2, 2 }, 3)]
         [InlineData(new int[] { 10, 3, 1, 1, 1, 5, 1 }, 3)]
         [InlineData(new int[] { 1, 2, 2, 3, 3, 3, 3, 2, 5 }, 4)]
+        [InlineData(new int[] { 1, 2, 2, 3, 4, 5 }, 2)]
         [InlineData(new int[] { 1, 2, 2, 3, 3, 3, 3 }, 4)]
-        [InlineData(new int[] { 1, 2, 2, 3, 2 }, 2)]
-        [InlineData(new int[] { 3, 3, 3, 2, 2 }, 3)]
         [InlineData(new int[] { 1, 3, 2, 3, 3, 3, 3 }, 4)]
+        [InlineData(new int[] { 1, 2, 2, 3, 2 }, 2)]
         public void MaxConsecutiveCount(int[] numbers, int expected)
         {
             // Arrange
@@ -116,7 +116,7 @@ namespace ChallengesWithTestsMark8.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-
+        
         [Theory]
         [InlineData(new[] { 1d, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 }, 4, new[] { 4d, 8, 12, 16 })]
         [InlineData(new[] { 1d, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 }, 3, new[] { 3d, 6, 9, 12, 15 })]
