@@ -6,14 +6,14 @@ namespace ChallengesWithTestsMark8
 {
     public class ChallengesSet02
     {
-        public bool CharacterIsALetter(char c)
-        {
-            return Char.IsLetter(c);
-        }
+        public bool CharacterIsALetter(char c) => char.IsLetter(c);
+        //{
+        //    return Char.IsLetter(c);
+        //}
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            return vals.Count() % 2 == 0 ? true : false;
+            return vals.Count() % 2 == 0;
 
             //int count = 0;
             //for (int i = 0; i < vals.Length; i++)
@@ -28,7 +28,7 @@ namespace ChallengesWithTestsMark8
 
         public bool IsNumberEven(int number)
         {
-            return number % 2 == 0 ? true : false;
+            return number % 2 == 0;
 
             //if (number % 2 == 0)
             //    return true;
@@ -38,7 +38,7 @@ namespace ChallengesWithTestsMark8
 
         public bool IsNumberOdd(int num)
         {
-            return num % 2 != 0 ? true : false;
+            return num % 2 != 0;
 
             //if (num % 2 != 0)
             //    return true;
@@ -61,7 +61,13 @@ namespace ChallengesWithTestsMark8
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            return str1.Length > str2.Length ? str2.Length : str1.Length;
+            var list = new List<int>() { str1.Length, str2.Length };  //object initializer syntax
+            return list.Min();
+
+            //return list.Min();
+
+
+            //return str1.Length > str2.Length ? str2.Length : str1.Length;
 
             //if (str1.Length > str2.Length)
             //    return str2.Length;
@@ -100,12 +106,12 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOdd(List<int> numbers)
         {
-            if(numbers == null)
-            {
-                return false;
-            }
+            //if(numbers == null)
+            //{
+            //    return false;
+            //}
 
-            return numbers.Where(x => x % 2 != 0).Sum() % 2 != 0 ? true : false;
+            return numbers != null && numbers.Where(x => x % 2 != 0).Sum() % 2 != 0;
 
             //if (numbers == null)
             //    return false;
