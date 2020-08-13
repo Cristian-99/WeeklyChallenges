@@ -38,12 +38,16 @@ namespace ChallengesWithTestsMark8
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            bool hasUpLowNum = true;
-            var hasUp = password.Any(Char.IsUpper);
-            var hasLow = password.Any(Char.IsLower);
-            var hasNum = password.Any(Char.IsDigit);
-            hasUpLowNum = (hasUpLowNum == hasUp && hasUpLowNum == hasLow && hasUpLowNum == hasNum);
-            return hasUpLowNum;
+            return password.Any(char.IsUpper) && 
+                   password.Any(char.IsLower) &&
+                   password.Any(char.IsDigit);
+
+            //bool hasUpLowNum = true;
+            //var hasUp = password.Any(Char.IsUpper);
+            //var hasLow = password.Any(Char.IsLower);
+            //var hasNum = password.Any(Char.IsDigit);
+            //hasUpLowNum = (hasUpLowNum == hasUp && hasUpLowNum == hasLow && hasUpLowNum == hasNum);
+            //return hasUpLowNum;
 
         }
 
@@ -59,10 +63,12 @@ namespace ChallengesWithTestsMark8
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            if (divisor == 0)
-                return 0;
-            else
-                return dividend / divisor;
+            return divisor == 0 ? 0 : dividend / divisor;
+
+            //if (divisor == 0)
+            //    return 0;
+            //else
+            //    return dividend / divisor;
         }
 
         public int LastMinusFirst(int[] nums)
