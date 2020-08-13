@@ -41,10 +41,12 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            int set1 = Math.Min(number1, number2);
-            int set2 = Math.Min(number3, number4);
+            List<int> list = new List<int>(){ number1, number2, number3, number4};
+            return list.Min();
+            //int set1 = Math.Min(number1, number2);
+            //int set2 = Math.Min(number3, number4);
 
-            return Math.Min(set1, set2);
+            //return Math.Min(set1, set2);
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
@@ -66,10 +68,8 @@ namespace ChallengesWithTestsMark8
 
         public bool IsStringANumber(string input)
         {
-            int isInt;
-            double isDouble;
-            bool x = Int32.TryParse(input, out isInt);
-            bool y = double.TryParse(input, out isDouble);
+            bool x = Int32.TryParse(input, out _);
+            bool y = double.TryParse(input, out _);
             if (x || y)
                 return true;
             else
