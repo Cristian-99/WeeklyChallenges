@@ -9,6 +9,7 @@ namespace ChallengesWithTestsMark8
         public bool ArrayContainsAFalse(bool[] vals)
         {
             return vals.Contains(false);
+<<<<<<< HEAD
             
             //bool isfalse = false;
 
@@ -18,6 +19,16 @@ namespace ChallengesWithTestsMark8
             //        isfalse = true;
             //}
             //return isfalse;
+=======
+
+            //bool isFalse = false;
+            //foreach (var val in vals)
+            //{
+            //    if (val == isFalse)
+            //        isFalse = true;
+            //}
+            //return isFalse;
+>>>>>>> 2e42e37bd0d5aa56299064830a04c16a4869e063
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
@@ -33,8 +44,13 @@ namespace ChallengesWithTestsMark8
             //    {
             //        x += num;
             //    }
+<<<<<<< HEAD
             //isOdd = x % 2 == 0 ? false : true;
             //return isOdd;
+=======
+            //    isOdd = x % 2 == 0 ? false : true;
+            //    return isOdd;
+>>>>>>> 2e42e37bd0d5aa56299064830a04c16a4869e063
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
@@ -95,6 +111,7 @@ namespace ChallengesWithTestsMark8
                 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73,
                 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99
             };
+<<<<<<< HEAD
             return odds;
 
             //int oddIncrement = 1;
@@ -115,7 +132,23 @@ namespace ChallengesWithTestsMark8
             //    i += 2;
             //}
             //return x;
+=======
+
+            return odds;
+
+            //    int[] x = new int[50];
+            //    int count = 0;
+            //    int i = 1;
+            //    while (count < 50)
+            //    {
+            //        x[count] = i;
+            //        count++;
+            //        i += 2;
+            //    }
+            //    return x;
+>>>>>>> 2e42e37bd0d5aa56299064830a04c16a4869e063
         }
+        
 
         public void ChangeAllElementsToUppercase(string[] words)
         {            

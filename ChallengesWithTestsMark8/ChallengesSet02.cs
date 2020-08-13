@@ -106,11 +106,14 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOdd(List<int> numbers)
         {
+<<<<<<< HEAD
             //if(numbers == null)
             //{
             //    return false;
             //}
 
+=======
+>>>>>>> 2e42e37bd0d5aa56299064830a04c16a4869e063
             return numbers != null && numbers.Where(x => x % 2 != 0).Sum() % 2 != 0;
 
             //if (numbers == null)
