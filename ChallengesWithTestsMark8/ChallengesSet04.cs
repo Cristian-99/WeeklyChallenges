@@ -42,6 +42,7 @@ namespace ChallengesWithTestsMark8
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
             List<int> list = new List<int>(){ number1, number2, number3, number4};
+
             return list.Min();
             //int set1 = Math.Min(number1, number2);
             //int set2 = Math.Min(number3, number4);
