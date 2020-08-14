@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -40,10 +41,16 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            int set1 = Math.Min(number1, number2);
-            int set2 = Math.Min(number3, number4);
+            List<int> list = new List<int>();
+            list.Add(number1);
+            list.Add(number2);
+            list.Add(number3);
+            list.Add(number4);
+            return list.Min();
+            //int set1 = Math.Min(number1, number2);
+            //int set2 = Math.Min(number3, number4);
 
-            return Math.Min(set1, set2);
+            //return Math.Min(set1, set2);
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
