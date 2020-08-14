@@ -32,6 +32,7 @@ namespace ChallengesWithTestsMark8
         public bool IsAscendingOrder(int[] numbers)
         {
             bool isTrue = true;
+
             if (numbers == null)
                 isTrue = false;
             else if (numbers.Length == 0)
@@ -95,11 +96,10 @@ namespace ChallengesWithTestsMark8
             {
                 list.Add(elements[i]);
             }
+            
+            double[] arr = new double[list.Count];
 
-            int size = list.Count;
-            double[] arr = new double[size];
-
-            for(int i = 0; i < size; i++)
+            for(int i = 0; i < list.Count; i++)
             {
                 arr[i] = list[i];
             }
@@ -108,10 +108,10 @@ namespace ChallengesWithTestsMark8
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
         {
+            bool isTrue = false;
            
             if (nums.Length == 0)
                 return false;
-            bool isTrue = false;
 
             for (int i = 0; i < nums.Length; i++)
             {

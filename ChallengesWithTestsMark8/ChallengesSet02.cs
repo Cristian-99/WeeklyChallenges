@@ -61,7 +61,13 @@ namespace ChallengesWithTestsMark8
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            return str1.Length > str2.Length ? str2.Length : str1.Length;
+            var list = new List<int>() { str1.Length, str2.Length };  //object initializer syntax
+            return list.Min();
+
+            //return list.Min();
+
+
+            //return str1.Length > str2.Length ? str2.Length : str1.Length;
 
             //if (str1.Length > str2.Length)
             //    return str2.Length;

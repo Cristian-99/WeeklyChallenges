@@ -9,8 +9,10 @@ namespace ChallengesWithTestsMark8
         public bool CollectionContainsWord(IEnumerable<string> words, string word, bool ignoreCase)
         {
             bool isTrue = true;
+
             if (words == null)
                 return false;
+
             if (ignoreCase == true)
             {
                 foreach(var item in words)
@@ -50,6 +52,7 @@ namespace ChallengesWithTestsMark8
             bool isPrime = true;
             int factorCount = 1;
             double count = 1;
+
             if (num <= 1)
                 isPrime = false;
             while (count < num)
@@ -201,11 +204,11 @@ namespace ChallengesWithTestsMark8
             int c = 3; int cCount = 1;
             int d = 4; int dCount = 1;
             int e = 5; int eCount = 1;
-            int j = 10;int jCount = 1;
+            int j = 10; int jCount = 1;
 
             List<int> list = new List<int>();
 
-            for(int i = 0; i < numbers.Length - 1; i++)
+            for (int i = 0; i < numbers.Length - 1; i++)
             {
                 if (numbers[i] == a && numbers[i] == numbers[i + 1])
                     aCount++; list.Add(aCount);
@@ -222,36 +225,6 @@ namespace ChallengesWithTestsMark8
             }
 
             return list.Max();
-
-
-
-            /*int firstCount = 1;
-            int secondCount = 0;
-                        
-            for (int i = 0; i < numbers.Length-1; i++)
-            {
-                if (numbers[i] == numbers[i + 1])
-                {
-                    firstCount++;
-                }
-
-                if (numbers[i] != numbers[i + 1])
-                {
-                    foreach(var w in numbers)
-                    {
-                        int x = w;
-                        if (w == x)
-                            secondCount++;
-                    }
-                    
-                }
-                               
-            }
-
-            if (firstCount > secondCount)
-                return firstCount;
-            else 
-                return secondCount;*/
         }
 
         public double[] GetEveryNthElement(List<double> elements, int n)

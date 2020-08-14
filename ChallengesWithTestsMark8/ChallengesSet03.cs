@@ -9,14 +9,15 @@ namespace ChallengesWithTestsMark8
         public bool ArrayContainsAFalse(bool[] vals)
         {
             return vals.Contains(false);
+            
+            //bool isfalse = false;
 
-            //bool isFalse = false;
             //foreach (var val in vals)
             //{
-            //    if (val == isFalse)
-            //        isFalse = true;
+            //    if (val == false)
+            //        isfalse = true;
             //}
-            //return isFalse;
+            //return isfalse;
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
@@ -28,19 +29,38 @@ namespace ChallengesWithTestsMark8
             //if (numbers == null)
             //    return false;
             //else
+            //{
             //    foreach (var num in numbers)
             //    {
             //        x += num;
             //    }
-            //    isOdd = x % 2 == 0 ? false : true;
-            //    return isOdd;
+            //}
+
+            //isOdd = x % 2 == 0 ? false : true;
+            //return isOdd;
+
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
+<<<<<<< HEAD
             return password.Any(char.IsUpper) && 
                    password.Any(char.IsLower) &&
                    password.Any(char.IsDigit);
+=======
+            return password.Any(x => char.IsUpper(x)) && 
+                   password.Any(x => char.IsLower(x)) && 
+                   password.Any(x => char.IsDigit(x));
+
+            //if (password.Any(x => char.IsUpper(x)) && password.Any(x => char.IsLower(x)) && password.Any(x => char.IsDigit(x)))
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+>>>>>>> 2e48a2949c3277a4ac39bda4cf86fcae353d3bd2
 
             //bool hasUpLowNum = true;
             //var hasUp = password.Any(Char.IsUpper);
@@ -73,7 +93,8 @@ namespace ChallengesWithTestsMark8
 
         public int LastMinusFirst(int[] nums)
         {
-            return nums[nums.Length - 1] - nums[0];
+            return nums.Last() - nums.First();
+            //return nums[nums.Length - 1] - nums[0];
         }
 
         public int[] GetOddsBelow100()
@@ -87,22 +108,30 @@ namespace ChallengesWithTestsMark8
 
             return odds;
 
-            //    int[] x = new int[50];
-            //    int count = 0;
-            //    int i = 1;
-            //    while (count < 50)
-            //    {
-            //        x[count] = i;
-            //        count++;
-            //        i += 2;
-            //    }
-            //    return x;
+            //int oddIncrement = 1;
+            //int[] x = new int[50];
+            //for (int i = 0; i < 50; i++)
+            //{
+            //    x[i] = oddIncrement;
+            //    oddIncrement += 2;
+            //}
+            //return x;
+
+            //int count = 0;
+            //int i = 1;
+            //while (count < 50)
+            //{
+            //    x[count] = i;
+            //    count++;
+            //    i += 2;
+            //}
+            //return x;
         }
         
 
         public void ChangeAllElementsToUppercase(string[] words)
-        {
-            for(int i = 0; i < words.Length; i++)
+        {            
+            for (int i = 0; i < words.Length; i++)
             {
                 words[i] = words[i].ToUpper();
             }
