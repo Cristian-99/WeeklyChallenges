@@ -78,26 +78,24 @@ namespace ChallengesWithTestsMark8
 
         public bool IsStringANumber(string input)
         {
-<<<<<<< HEAD
             bool x = Int32.TryParse(input, out _);
             bool y = double.TryParse(input, out _);
             if (x || y)
                 return true;
             else
-                return false;                
-=======
+                return false;      
 
-            int isInt;
-            double isDouble;
-            bool x = Int32.TryParse(input, out isInt);
-            bool y = double.TryParse(input, out isDouble);
-            return x || y;
+            //int isInt;
+            //double isDouble;
+            //bool x = Int32.TryParse(input, out isInt);
+            //bool y = double.TryParse(input, out isDouble);
+            //return x || y;
 
             //if (x || y)
             //    return true;
             //else
             //    return false;
->>>>>>> 2e48a2949c3277a4ac39bda4cf86fcae353d3bd2
+
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)

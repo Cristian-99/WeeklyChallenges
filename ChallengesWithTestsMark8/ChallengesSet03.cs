@@ -43,14 +43,10 @@ namespace ChallengesWithTestsMark8
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-<<<<<<< HEAD
+
             return password.Any(char.IsUpper) && 
                    password.Any(char.IsLower) &&
-                   password.Any(char.IsDigit);
-=======
-            return password.Any(x => char.IsUpper(x)) && 
-                   password.Any(x => char.IsLower(x)) && 
-                   password.Any(x => char.IsDigit(x));
+                   password.Any(char.IsDigit);            
 
             //if (password.Any(x => char.IsUpper(x)) && password.Any(x => char.IsLower(x)) && password.Any(x => char.IsDigit(x)))
             //{
@@ -60,7 +56,6 @@ namespace ChallengesWithTestsMark8
             //{
             //    return false;
             //}
->>>>>>> 2e48a2949c3277a4ac39bda4cf86fcae353d3bd2
 
             //bool hasUpLowNum = true;
             //var hasUp = password.Any(Char.IsUpper);
